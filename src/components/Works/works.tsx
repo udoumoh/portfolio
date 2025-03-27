@@ -89,7 +89,7 @@ const projects = [
 ];
 
 // Map technology names to their respective icons
-const techIcons: Record<string, JSX.Element | null> = {
+const techIcons: Record<string, any | null> = {
   "NEXT.JS": <SiNextdotjs />,
   TAILWINDCSS: <SiTailwindcss />,
   SHADCN: <SiNextdotjs />,

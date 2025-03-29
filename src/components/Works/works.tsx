@@ -90,7 +90,7 @@ const projects = [
   {
     name: "Eazzy-Logistics",
     description:
-      "Built the Dahboard for a Logistics Company that provides a platform for users to manage their logistics operations efficiently. It offers features such as shipment tracking, order management, and real-time updates to streamline the logistics process.",
+      "Built the Dashboard for a Logistics Company that provides a platform for users to manage their logistics operations efficiently. It offers features such as shipment tracking, order management, and real-time updates to streamline the logistics process.",
     image: "/projects/eazzy-logistics.png",
     logo: "/assets/eazzy-logo.svg",
     link: "https://eazzy-logistics.productkitchen.tech/",

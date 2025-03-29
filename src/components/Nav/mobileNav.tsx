@@ -40,17 +40,17 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, onClose }) => {
   const socialLinks = [
     {
       icon: <FaGithub size={20} />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/udoummoh",
       label: "GitHub",
     },
     {
       icon: <FaLinkedin size={20} />,
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://linkedin.com/in/johnudoumoh",
       label: "LinkedIn",
     },
     {
       icon: <FaTwitter size={20} />,
-      url: "https://twitter.com/yourusername",
+      url: "https://twitter.com/johnudoumoh",
       label: "Twitter",
     },
   ];

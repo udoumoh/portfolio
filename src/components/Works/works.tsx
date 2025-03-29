@@ -14,6 +14,7 @@ import {
   SiFramer,
   SiGreensock,
   SiGraphql,
+  SiReactquery,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
@@ -33,7 +34,7 @@ const projects = [
       "Greynote Parents is a dashboard designed to connect parents with schools based on their unique location and preferences, simplifying the process of exploring educational options for their children. ​",
     image: "/projects/greybanner.png",
     logo: "/assets/greyfull.png",
-    link: "https://parent.greynote.app",
+    link: "https://www.youtube.com/@GreynoteLimited/videos",
     technologies: ["NEXT.JS", "CHAKRA-UI", "GRAPHQL", "FRAMER", "TYPESCRIPT"],
   },
   {
@@ -51,14 +52,14 @@ const projects = [
       "Greynote Agents is a platform that empowers individuals to become part of an innovative sales network, providing tools and resources to succeed as sales agents within the Greynote ecosystem.",
     image: "/projects/agentsdashboard.png",
     logo: "/assets/greyfull.png",
-    link: "https://sales.greynote.app",
+    link: "https://www.youtube.com/@GreynoteLimited/videos",
     technologies: ["NEXT.JS", "CHAKRA UI", "GRAPHQL", "FRAMER", "TYPESCRIPT"],
   },
   {
     name: "Ojami",
     description:
       "Ojami is a shopping platform powered by Kora, offering users a new and immersive shopping experience. It features store discovery, product listings, and advanced tools like 3D product visualization and an AI shopping assistant.",
-    image: "/projects/ojami-vendor.png",
+    image: "/projects/vendor-mobile.png",
     logo: "/assets/ojami-logo.png",
     link: "https://ojami.shop/",
     technologies: [
@@ -86,6 +87,21 @@ const projects = [
       "NODE JS",
     ],
   },
+  {
+    name: "Eazzy-Logistics",
+    description:
+      "Built the Dahboard for a Logistics Company that provides a platform for users to manage their logistics operations efficiently. It offers features such as shipment tracking, order management, and real-time updates to streamline the logistics process.",
+    image: "/projects/eazzy-logistics.png",
+    logo: "/assets/eazzy-logo.svg",
+    link: "https://eazzy-logistics.productkitchen.tech/",
+    technologies: [
+      "NEXT.JS",
+      "TAILWINDCSS",
+      "REST API",
+      "TYPESCRIPT",
+      "TANSTACK QUERY",
+    ],
+  },
 ];
 
 // Map technology names to their respective icons
@@ -100,6 +116,7 @@ const techIcons: Record<string, any | null> = {
   "NODE JS": <SiNodedotjs />,
   "REST API": <TbApi />,
   GSAP: <SiGreensock />,
+  "TANSTACK QUERY": <SiReactquery />,
 };
 
 const Works = () => {
@@ -156,7 +173,7 @@ const Works = () => {
   const currentProject = projects[activeIndex];
 
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-black text-white py-16" id="works">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center mb-12">
           <h2 className="font-spaceMono text-4xl font-semibold text-white z-10">
@@ -219,24 +236,35 @@ const Works = () => {
               } items-center`}
             >
               {/* Project image */}
-              <div className="relative h-[300px] md:h-[500px] w-full overflow-hidden rounded-xl">
+              <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-xl">
+                {/* Background Blurred Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center blur-2xl scale-110"
+                  style={{
+                    backgroundImage: `url(${
+                      currentProject.image || "/placeholder.svg"
+                    })`,
+                  }}
+                ></div>
+
+                {/* Foreground Image (Object Contain) */}
                 <Image
                   src={currentProject.image || "/placeholder.svg"}
                   alt={currentProject.name}
                   fill
-                  className="object-cover object-top"
+                  className="relative object-contain object-center"
                 />
               </div>
 
               {/* Project details */}
               <div className="flex flex-col">
-                <div className="bg-gray-800 p-4 rounded-xl inline-block mb-6 w-fit">
+                <div className="bg-gray-300 p-2 rounded-md inline-block mb-6 w-fit border-2 border-purple-100">
                   <Image
                     width={120}
                     height={40}
                     src={currentProject.logo || "/placeholder.svg"}
                     alt={`${currentProject.name} logo`}
-                    className="h-10 object-contain"
+                    className="h-5 object-contain"
                   />
                 </div>
 

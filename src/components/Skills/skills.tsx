@@ -165,26 +165,6 @@ const skillCategories = [
       },
     ],
   },
-  {
-    name: "DevOps & Tools",
-    skills: [
-      {
-        name: "Git",
-        icon: <SiGit />,
-        color: "bg-orange-50 border-orange-200 text-orange-700",
-      },
-      {
-        name: "AWS",
-        icon: <SiAmazon />,
-        color: "bg-yellow-50 border-yellow-200 text-yellow-700",
-      },
-      {
-        name: "Linux",
-        icon: <SiLinux />,
-        color: "bg-gray-100 border-gray-300 text-gray-700",
-      },
-    ],
-  },
 ];
 
 const SkillItem = ({ skill } : any) => {

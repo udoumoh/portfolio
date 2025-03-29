@@ -7,7 +7,7 @@ import BlurText from "../reactbits/BlurText";
 const About = ({}) => {
 
   return (
-    <section className="flex flex-col py-10">
+    <section className="flex flex-col py-10" id="about">
       <div className="flex flex-col items-center">
         <h2 className="font-spaceMono text-4xl font-semibold">ABOUT</h2>
         <span className="relative -top-5 left-10 -z-50 h-5 w-10 bg-blue-700/20"></span>

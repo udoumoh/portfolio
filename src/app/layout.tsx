@@ -3,6 +3,7 @@ import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav/nav";
 import Footer from "@/components/Footer/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,7 @@ export default function RootLayout({
         <link rel="icon" href="/assets/portfolio-logo.svg" />
       </head>
       <body className={`${inter.variable} ${spaceMono.variable} antialiased`}>
+        <SpeedInsights />
         <Nav />
         {children}
         <Footer />

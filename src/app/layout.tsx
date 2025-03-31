@@ -29,7 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>John Udoumoh | Frontend Engineer & Next.js Developer</title>
         <link rel="icon" href="/assets/portfolio-logo.svg" />
+        <meta name="description" content="Hi, I'm John Udoumoh, a Frontend Engineer specializing in Next.js, React, and TypeScript. Explore my portfolio to see my latest projects and expertise."/>
+        <meta name="keywords" content="Frontend Developer, Next.js Developer, React Engineer, Software Engineer, Portfolio, Web Development"/>
+        <meta name="author" content="John Udoumoh"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="robots" content="index, follow"/>
       </head>
       <body className={`${inter.variable} ${spaceMono.variable} antialiased`}>
         <SpeedInsights />
@@ -37,6 +43,19 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "John Udoumoh",
+          "jobTitle": "Frontend Engineer",
+          "url": "https://yourwebsite.com",
+          "sameAs": [
+            "https://github.com/udoumoh",
+            "https://www.linkedin.com/in/johnudoumoh"
+          ]
+        })
+      }} />
     </html>
   );
 }

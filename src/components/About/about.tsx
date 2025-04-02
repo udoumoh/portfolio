@@ -24,19 +24,19 @@ const About = ({}) => {
           delay={20}
           animateBy="words"
           direction="top"
-          className="text-2xl font-inter font-medium text-black leading-[50px]"
+          className="text-md md:text-2xl font-inter font-medium text-black leading-[30px] md:leading-[50px]"
         />
         <div className="flex mt-12 mb-6 gap-6">
           <Link
             href="/"
             className="flex items-center gap-2 py-1 border-b-2 border-black"
           >
-            <p className="font-spaceMono text-sm font-semibold">Read More</p>
+            <p className="font-spaceMono text-[10px] md:text-sm font-semibold">Read More</p>
             <CgArrowTopRight className="w-5 h-5" />
           </Link>
-          <button className="flex items-center bg-black px-8 rounded-full gap-4 py-2">
+          <button className="flex items-center bg-black px-4 md:px-8 rounded-full gap-4 py-2">
             <a
-              className="font-semibold font-spaceMono text-white"
+              className="font-semibold font-spaceMono text-white text-[10px] md:text-base"
               href="/files/resume.pdf"
               download="John_Udoumoh_CV.pdf"
             >
@@ -47,7 +47,7 @@ const About = ({}) => {
                 className="custom-class"
               />
             </a>
-            <FaRegFileAlt className="w-4 h-4 text-[#f1f1f1c4]" />
+            <FaRegFileAlt className="w-3 h-3 md:w-4 md:h-4 text-[#f1f1f1c4]" />
           </button>
         </div>
       </div>

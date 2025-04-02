@@ -71,7 +71,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
-      <script
+      <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

@@ -11,12 +11,12 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="text-center md:text-right">
+        <div className="text-center md:text-start">
           <p className="font-inter text-sm text-gray-600">
             © {currentYear} All Rights Reserved
           </p>
           <p className="font-inter text-sm text-gray-600">
-            Designed & Built with ❤️
+            Designed & Built by <strong>ME🤖 </strong>
           </p>
         </div>
       </div>

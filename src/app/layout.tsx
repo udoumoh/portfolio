@@ -19,7 +19,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "John David Udoumoh Portfolio",
-  description: "Abandon all hope ye who enter here ",
+  description: "",
 };
 
 export default function RootLayout({

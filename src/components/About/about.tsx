@@ -31,14 +31,16 @@ const About = ({}) => {
             href="/"
             className="flex items-center gap-2 py-1 border-b-2 border-black"
           >
-            <p className="font-spaceMono text-[10px] md:text-sm font-semibold">Read More</p>
+            <p className="font-spaceMono text-[10px] md:text-sm font-semibold">
+              Read More
+            </p>
             <CgArrowTopRight className="w-5 h-5" />
           </Link>
           <button className="flex items-center bg-black px-4 md:px-8 rounded-full gap-4 py-2">
             <a
               className="font-semibold font-spaceMono text-white text-[10px] md:text-base"
-              href="/files/resume.pdf"
-              download="John_Udoumoh_CV.pdf"
+              href="https://drive.google.com/file/d/1IGxGqFqCc_ntxF5Bu13Dzwg0AS8fbHR0/view?usp=sharing"
+              // download="John_Udoumoh_CV.pdf"
             >
               <ShinyText
                 text={`DOWNLOAD CV `}

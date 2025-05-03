@@ -13,7 +13,10 @@ const Nav = () => {
   const navLinks = [
     { name: "About", url: "#about" },
     { name: "Projects", url: "#works" },
-    { name: "Resume", url: "/" },
+    {
+      name: "Resume",
+      url: "https://drive.google.com/file/d/1IGxGqFqCc_ntxF5Bu13Dzwg0AS8fbHR0/view?usp=sharing",
+    },
   ];
 
   return (

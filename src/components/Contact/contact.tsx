@@ -3,25 +3,26 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { cn } from "@/lib/utils";
 
 const socialLinks = [
   {
-    icon: <FaGithub className="w-6 h-6" />,
+    icon: <FaGithub className="w-5 h-5" />,
     url: "https://github.com/udoumoh",
     label: "GitHub",
   },
   {
-    icon: <FaLinkedin className="w-6 h-6" />,
+    icon: <FaLinkedin className="w-5 h-5" />,
     url: "https://www.linkedin.com/in/johnudoumoh/",
     label: "LinkedIn",
   },
   {
-    icon: <FaTwitter className="w-6 h-6" />,
+    icon: <FaTwitter className="w-5 h-5" />,
     url: "https://twitter.com/JohnUdoumoh",
     label: "Twitter",
   },
   {
-    icon: <MdEmail className="w-6 h-6" />,
+    icon: <MdEmail className="w-5 h-5" />,
     url: "mailto:johnudoumoh63@gmail.com",
     label: "Email",
   },
@@ -80,11 +81,23 @@ const Contact = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white p-3 rounded-full border border-[#e0e0e0] hover:border-blue-700 transition-colors"
                 whileHover={{ y: -5 }}
                 aria-label={link.label}
+                className={cn(
+                  "group flex items-center hover:gap-2 text-black hover:text-white overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-out rounded-full border border-[#e0e0e0] bg-white p-3",
+                  link.label === "GitHub"
+                    ? "hover:bg-black"
+                    : link.label === "LinkedIn"
+                    ? "hover:bg-blue-800"
+                    : link.label === "Twitter"
+                    ? "hover:bg-cyan-500"
+                    : "hover:bg-red-700"
+                )}
               >
                 {link.icon}
+                <span className=" max-w-0 group-hover:max-w-[100px] text-sm transition-all duration-500 opacity-0 group-hover:opacity-100">
+                  {link.label}
+                </span>
               </motion.a>
             ))}
           </div>

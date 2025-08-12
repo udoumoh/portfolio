@@ -11,6 +11,7 @@ export default {
     fontFamily: {
       inter: "var(--font-inter)",
       spaceMono: "var(--font-space-mono)",
+      bricolageGrotesque: "var(--font-bricolage-grotesque)",
     },
     extend: {
       keyframes: {

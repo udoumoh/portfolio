@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter, Space_Mono, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav/nav";
 import Footer from "@/components/Footer/footer";
@@ -16,6 +16,12 @@ const spaceMono = Space_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
+
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+})
 
 export const metadata: Metadata = {
   title: "John David Udoumoh Portfolio",
@@ -34,7 +40,7 @@ export default function RootLayout({
         <link rel="icon" href="/assets/portfolio-logo.svg" />
         <meta
           name="description"
-          content="Hi, I'm John Udoumoh, a Frontend Engineer specializing in Next.js, React, and TypeScript. Explore my portfolio to see my latest projects and expertise."
+          content="Hark! Welcome, fair traveller. Set thine eyes upon that which may be call’d naught but art."
         />
         <meta
           name="keywords"
@@ -65,7 +71,7 @@ export default function RootLayout({
         `}
       </Script>
 
-      <body className={`${inter.variable} ${spaceMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${spaceMono.variable} ${bricolage.variable} antialiased`}>
         <SpeedInsights />
         <Nav />
         {children}

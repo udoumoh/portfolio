@@ -23,7 +23,7 @@ const projects = [
       "SalesKonnect is a platform that seamlessly connects businesses with a dynamic sales force, enabling companies to expand their reach without the overhead of managing an in-house team. Simultaneously, it offers individuals flexible and rewarding sales opportunities, complete with training and support to ensure success.",
     image: "/projects/saleskonnect.png",
     logo: "/assets/sklogo.png",
-    link: "https://sk.productkitchen.tech/",
+    link: "https://sales-konnect.co/",
     technologies: ["NEXT.JS", "TAILWINDCSS", "SHADCN", "FRAMER"],
     category: "SaaS Platform",
   },
@@ -31,7 +31,7 @@ const projects = [
     name: "Greynote Parents",
     description:
       "Greynote Parents is a dashboard designed to connect parents with schools based on their unique location and preferences, simplifying the process of exploring educational options for their children.",
-    image: "/projects/greybanner.png",
+    image: "/projects/gnParents/dashboard.png",
     logo: "/assets/greyfull.png",
     link: "https://www.youtube.com/@GreynoteLimited/videos",
     technologies: ["NEXT.JS", "CHAKRA-UI", "GRAPHQL", "FRAMER", "TYPESCRIPT"],
@@ -41,7 +41,7 @@ const projects = [
     name: "Product Kitchen",
     description:
       "Product Kitchen specializes in building software solutions aimed at growing businesses, elevating brands, and engaging more customers. They offer a range of services tailored to meet the unique needs of their clients.",
-    image: "/projects/productkitchen.png",
+    image: "/projects/pk/hero.png",
     logo: "/assets/pklogo.svg",
     link: "https://productkitchen.tech/",
     technologies: ["NEXT.JS", "TAILWINDCSS", "SHADCN", "FRAMER", "GSAP"],
@@ -53,7 +53,7 @@ const projects = [
       "Greynote Agents is a platform that empowers individuals to become part of an innovative sales network, providing tools and resources to succeed as sales agents within the Greynote ecosystem.",
     image: "/projects/agentsdashboard.png",
     logo: "/assets/greyfull.png",
-    link: "https://www.youtube.com/@GreynoteLimited/videos",
+    link: "https://greynote.app/",
     technologies: ["NEXT.JS", "CHAKRA UI", "GRAPHQL", "FRAMER", "TYPESCRIPT"],
     category: "Sales Platform",
   },
@@ -61,7 +61,7 @@ const projects = [
     name: "Ojami",
     description:
       "Ojami is a shopping platform powered by Kora, offering users a new and immersive shopping experience. It features store discovery, product listings, and advanced tools like 3D product visualization and an AI shopping assistant.",
-    image: "/projects/vendor-mobile.png",
+    image: "/projects/ojami/vendor.png",
     logo: "/assets/ojami-logo.png",
     link: "https://ojami.shop/",
     technologies: [
@@ -74,30 +74,43 @@ const projects = [
     ],
     category: "E-commerce",
   },
+  // {
+  //   name: "The Hectre",
+  //   description:
+  //     "The Hectre is an all-in-one housing platform that simplifies house renting, property listing, and co-sharing. It assists users in finding ideal roommates, exploring rental properties, and listing available spaces.",
+  //   image: "/projects/gnStudents/dashboard.png",
+  //   logo: "/assets/theHectre-logo.png",
+  //   link: "https://thehectre-frontend.vercel.app/",
+  //   technologies: [
+  //     "NEXT.JS",
+  //     "CHAKRA UI",
+  //     "REST API",
+  //     "FRAMER",
+  //     "TYPESCRIPT",
+  //     "NODE JS",
+  //   ],
+  //   category: "PropTech",
+  // },
   {
-    name: "The Hectre",
-    description:
-      "The Hectre is an all-in-one housing platform that simplifies house renting, property listing, and co-sharing. It assists users in finding ideal roommates, exploring rental properties, and listing available spaces.",
-    image: "/projects/theHectre.png",
+    name: "Greynote Student",
+    image: "/projects/gnStudents/dashboard.png",
     logo: "/assets/theHectre-logo.png",
-    link: "https://thehectre-frontend.vercel.app/",
+    link: "https://greynote.app/",
     technologies: [
       "NEXT.JS",
       "CHAKRA UI",
-      "REST API",
+      "GRAPHQL",
       "FRAMER",
       "TYPESCRIPT",
       "NODE JS",
     ],
-    category: "PropTech",
+    category: "Education Tech",
   },
   {
     name: "Eazzy-Logistics",
-    description:
-      "Built the Dashboard for a Logistics Company that provides a platform for users to manage their logistics operations efficiently. It offers features such as shipment tracking, order management, and real-time updates.",
     image: "/projects/eazzy-logistics.png",
     logo: "/assets/eazzy-logo.svg",
-    link: "https://eazzy-logistics.productkitchen.tech/",
+    link: "https://eazzylogistics.com/",
     technologies: [
       "NEXT.JS",
       "TAILWINDCSS",
@@ -186,7 +199,7 @@ const Works = () => {
           </p>
         </motion.div>
 
-        {/* Clean grid layout */}
+        {/* Clean grid layout - 2 columns */}
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12"
           variants={containerVariants}
@@ -199,66 +212,48 @@ const Works = () => {
               className="group relative"
               variants={cardVariants}
             >
-              {/* Clean, minimal card design */}
-              <div className="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+              {/* Project card - clean and minimal like the image */}
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
                 
                 {/* Project image - dominant and clean */}
-                <div className="card-image relative h-[28rem] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden mx-5 my-2">
                   <Image
                     src={project.image}
                     alt={project.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain w-full h-[300px] group-hover:-translate-y-2 transition-transform duration-500 rounded-2xl"
                   />
-                  
-                  {/* Subtle gradient overlay for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
-                  {/* Project title and tagline integrated into image */}
-                  <div className="absolute top-8 left-8 right-8">
-                    <h3 className="text-3xl lg:text-4xl font-bold text-white mb-2 drop-shadow-lg">
-                      {project.name}
-                    </h3>
-                    <p className="text-white/90 text-lg leading-relaxed max-w-md drop-shadow-lg">
-                      {project.description.length > 80 
-                        ? `${project.description.substring(0, 80)}...` 
-                        : project.description
-                      }
-                    </p>
-                  </div>
-                  
-                  {/* Category badge - subtle and clean */}
-                  <div className="absolute top-6 right-6">
-                    <span className="inline-block bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
-                      {project.category}
-                    </span>
-                  </div>
                 </div>
 
-                {/* Minimal bottom content - just essential info */}
-                <div className="p-6 bg-white">
-                  {/* Tech stack - clean and minimal */}
+                {/* Project info - minimal and clean */}
+                <div className="px-6 pb-6">
+                  {/* Project name and category */}
+                  <div className="mb-3">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      {project.name}
+                    </h3>
+                    <p className="text-sm text-gray-500 font-medium">
+                      {project.category}
+                    </p>
+                  </div>
+
+                  {/* Tech stack - minimal icons */}
                   <div className="flex items-center gap-2 mb-4">
-                    {project.technologies.slice(0, 4).map((tech, idx) => (
+                    {project.technologies.map((tech, idx) => (
                       <div
                         key={idx}
-                        className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                        className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
                         title={tech}
                       >
                         {techIcons[tech]}
                       </div>
                     ))}
-                    {project.technologies.length > 4 && (
-                      <span className="text-gray-400 text-xs font-medium">
-                        +{project.technologies.length - 4}
-                      </span>
-                    )}
                   </div>
                   
-                  {/* Simple call-to-action */}
+                  {/* View project link */}
                   <Link
                     href={project.link}
-                    className="group/link inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200"
+                    className="group/link inline-flex items-center gap-2 text-gray-700 font-medium hover:text-blue-600 transition-colors duration-200"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
